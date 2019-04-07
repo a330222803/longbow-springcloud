@@ -1,0 +1,31 @@
+server:
+  port: 4001
+spring:
+  application:
+    name: longbow-eureka-config-server
+  cloud:
+    config:
+      label: master # 配置仓库的分支
+      server:
+        prefix: /config
+        git:
+          uri: https://gitee.com/ultrajava/config-repo.git
+          search-paths: millet-hill
+          username: AAAAA
+          password: BBBBB
+          basedir: config-repo/millet-hill
+          force-pull: true
+eureka:
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+    preferIpAddress: true
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false
+    response-cache-update-interval-ms: 3000
+    response-cache-auto-expiration-in-seconds: 180
+    eviction-interval-timer-in-ms: 3000

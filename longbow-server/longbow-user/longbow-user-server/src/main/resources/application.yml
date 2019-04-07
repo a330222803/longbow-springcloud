@@ -1,0 +1,31 @@
+server:
+  port: 12005
+
+#logging:
+#  file: log/auth/auth.log
+#logging:
+#  level:
+#    root: DEBUG
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  application:
+    name: longbow-user-server
+  profiles:
+    include: consumer,provider,cache,database
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/user?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    druid:
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      stat-view-servlet:
+        allow: true
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--<properties resource="application-dev.properties"/>-->
+    <properties resource="generator.properties"></properties>
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.longbow.mybatis.MyMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="${jdbc.driverClass}"
+                        connectionURL="${jdbc.connectionURL}"
+                        userId="${jdbc.username}"
+                        password="${jdbc.password}">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.longbow.crm.customer.dal.po" targetProject="src/main/java">
+            <property name="rootClass" value="com.longbow.common.data.BaseEntity"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+        <javaClientGenerator targetPackage="com.longbow.crm.customer.dal.mapper" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+
+        <table tableName="t_crm_special_resource_history" domainObjectName="CrmCustomerResourceHis">
+            <!--mysql 配置-->
+            <!--<generatedKey column="uid" sqlStatement="Mysql" identity="true"/>-->
+            <!--oracle 配置-->
+            <!--<generatedKey column="uid" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
+        </table>
+    </context>
+</generatorConfiguration>

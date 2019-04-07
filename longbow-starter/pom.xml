@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>longbow-springcloud</artifactId>
+        <groupId>com.longbow</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>longbow-starter</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>longbow-starter-id</module>
+        <module>longbow-starter-workflow</module>
+        <module>longbow-starter-cache</module>
+        <module>longbow-starter-core</module>
+        <module>longbow-starter-eureka</module>
+        <module>longbow-starter-mybatis</module>
+        <module>longbow-starter-mybatis-mycat</module>
+        <module>longbow-starter-nacos</module>
+        <module>longbow-starter-swagger2</module>
+        <module>longbow-starter-security</module>
+        <module>longbow-starter-cors</module>
+    </modules>
+
+</project>

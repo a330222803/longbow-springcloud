@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.longbow.customer.dal.mapper.CrmCustomerResourceHisMapper" >
+  <resultMap id="BaseResultMap" type="com.longbow.customer.dal.po.CrmCustomerResourceHis" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="sc_id" property="scId" jdbcType="INTEGER" />
+    <result column="sc_name" property="scName" jdbcType="VARCHAR" />
+    <result column="sc_email" property="scEmail" jdbcType="VARCHAR" />
+    <result column="sc_phone" property="scPhone" jdbcType="VARCHAR" />
+    <result column="sc_phone_bak" property="scPhoneBak" jdbcType="VARCHAR" />
+    <result column="sc_tel" property="scTel" jdbcType="VARCHAR" />
+    <result column="sc_address" property="scAddress" jdbcType="VARCHAR" />
+    <result column="sc_province" property="scProvince" jdbcType="VARCHAR" />
+    <result column="dt_commit_time" property="dtCommitTime" jdbcType="TIMESTAMP" />
+    <result column="dt_handel_time" property="dtHandelTime" jdbcType="TIMESTAMP" />
+    <result column="sc_comments" property="scComments" jdbcType="VARCHAR" />
+    <result column="sc_sex" property="scSex" jdbcType="VARCHAR" />
+    <result column="sport_id" property="sportId" jdbcType="INTEGER" />
+    <result column="ip" property="ip" jdbcType="VARCHAR" />
+    <result column="sc_reffer" property="scReffer" jdbcType="VARCHAR" />
+    <result column="sport_name" property="sportName" jdbcType="VARCHAR" />
+    <result column="dt_fetch_time" property="dtFetchTime" jdbcType="TIMESTAMP" />
+    <result column="sc_reffer2" property="scReffer2" jdbcType="VARCHAR" />
+    <result column="sc_reffer3" property="scReffer3" jdbcType="VARCHAR" />
+    <result column="sc_reffer4" property="scReffer4" jdbcType="VARCHAR" />
+    <result column="ref_id" property="refId" jdbcType="INTEGER" />
+    <result column="sc_status" property="scStatus" jdbcType="TINYINT" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="plugs_id" property="plugsId" jdbcType="INTEGER" />
+    <result column="pro_id" property="proId" jdbcType="INTEGER" />
+    <result column="assignable" property="assignable" jdbcType="BIT" />
+    <result column="sc_source" property="scSource" jdbcType="VARCHAR" />
+    <result column="sc_platform" property="scPlatform" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="reply_status" property="replyStatus" jdbcType="TINYINT" />
+    <result column="resources_Type" property="resourcesType" jdbcType="TINYINT" />
+    <result column="cus_unique_id" property="cusUniqueId" jdbcType="VARCHAR" />
+    <result column="netchat_res" property="netchatRes" jdbcType="TINYINT" />
+    <result column="add_emp_id" property="addEmpId" jdbcType="INTEGER" />
+    <result column="new_res" property="newRes" jdbcType="BIT" />
+    <result column="ytx_ref_id" property="ytxRefId" jdbcType="INTEGER" />
+    <result column="ytx_ref_id2" property="ytxRefId2" jdbcType="INTEGER" />
+    <result column="ytx_ref_id3" property="ytxRefId3" jdbcType="INTEGER" />
+    <result column="ytx_ref_id4" property="ytxRefId4" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

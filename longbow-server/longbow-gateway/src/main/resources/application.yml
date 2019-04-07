@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: longbow-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  profiles:
+    include: consumer,cache
+
+zuul:
+  SendErrorFilter:
+    post:
+      disable: true
+    error:
+      disable: true
+  routes:
+    auth:
+      path: /auth/**
+      stripPrefix: false
+      serviceId: auth-server
+    user:
+      path: /user/**
+#      stripPrefix: false
+      serviceId: User-Center-Server
+    customer:
+      path: /customer/**
+      serviceId: crm-customer-server
+# 需要忽略的头部信息，不在传播到其他服务
+  sensitive-headers: Access-Control-Allow-Origin
+  ignored-headers: Access-Control-Allow-Origin

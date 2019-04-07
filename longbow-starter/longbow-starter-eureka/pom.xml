@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>longbow-starter</artifactId>
+        <groupId>com.longbow</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <name>${project.artifactId}</name>
+
+    <artifactId>longbow-starter-eureka</artifactId>
+    <packaging>jar</packaging>
+    <description>选用eureka作为注册中心时的公共组件</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.jmnarloch/ribbon-discovery-filter-spring-cloud-starter -->
+        <dependency>
+            <groupId>io.jmnarloch</groupId>
+            <artifactId>ribbon-discovery-filter-spring-cloud-starter</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+    </dependencies>
+
+</project>

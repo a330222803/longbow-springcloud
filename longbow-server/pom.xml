@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>longbow-springcloud</artifactId>
+        <groupId>com.longbow</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>longbow-server</artifactId>
+    <packaging>pom</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>项目中的服务</description>
+    <modules>
+        <module>longbow-product</module>
+        <module>longbow-user</module>
+        <module>longbow-customer</module>
+        <module>longbow-gateway</module>
+        <module>longbow-eureka-config-server</module>
+    </modules>
+
+</project>

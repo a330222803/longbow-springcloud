@@ -1,3 +1,26 @@
+
+/bin/
+/build/
+.classpath
+.project
+.classpath
+.settings
+*.iml
+/.gradle
+*.ipr
+*.iws
+.idea/
+.geany
+/target
+*/target
+target/
+/reports
+*/reports
+.DS_Store
+/tmp
+*.war
+.git/
+
 # Compiled class file
 *.class
 

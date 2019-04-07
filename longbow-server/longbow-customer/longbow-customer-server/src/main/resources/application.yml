@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: longbow-customer-server
+  cloud:
+      nacos:
+        discovery:
+          server-addr: 127.0.0.1:8848
+  datasource:
+      url: jdbc:mysql://127.0.0.1:3306/sec263?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false
+      username: root
+      password: root
+      driver-class-name: com.mysql.jdbc.Driver
+      druid:
+        initial-size: 1
+        min-idle: 1
+        max-active: 20
+        test-on-borrow: true
+        stat-view-servlet:
+          allow: true
+
+ribbon:
+  eager-load:
+    enabled: true
+    clients: longbow-user-server
+
+server:
+  port: 12006
+
+#logging:
+#  file: log/auth/auth.log
+
+eureka:
+  instance:
+    metadata-map:
+      release-tag: zhangbin
